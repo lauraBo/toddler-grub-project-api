@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  ingredients: MyText
+  method: MyText
+  time: 1
+  type: 
+  freezable: false
+
+two:
+  title: MyString
+  ingredients: MyText
+  method: MyText
+  time: 1
+  type: 
+  freezable: false
