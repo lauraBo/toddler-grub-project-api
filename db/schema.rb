@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_155959) do
+ActiveRecord::Schema.define(version: 2021_06_12_181613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2021_06_09_155959) do
     t.text "ingredients"
     t.text "method"
     t.integer "time"
-    t.string "type"
     t.boolean "freezable"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
