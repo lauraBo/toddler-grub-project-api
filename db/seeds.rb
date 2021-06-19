@@ -18,3 +18,11 @@
     freezable: 'no'
 )
   end
+
+
+  recipe1 = Recipe.create(title: 'sandwich', ingredients: 'bread and ham', method: 'put it together',
+  time:'5', freezable: 'no'),
+  recipe2 = Recipe.create(title: 'bun', ingredients: 'bread and ham', method: 'put it together',
+    time:'5', freezable: 'no'),
+    recipe3 = Recipe.create(title: 'hotdog', ingredients: 'bread and ham', method: 'put it together',
+      time:'5', freezable: 'no')

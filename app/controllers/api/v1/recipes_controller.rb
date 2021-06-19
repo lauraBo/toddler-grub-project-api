@@ -1,6 +1,7 @@
-class RecipesController < ApplicationController
+class Api::V1::RecipesController < ApplicationController
+  
   def index
-    @recipes = Recipe.order("created_at DESC")
+    @recipes = Recipe.all
     render json: @recipes
   end
 
