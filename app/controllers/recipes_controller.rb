@@ -1,12 +1,12 @@
 class RecipesController < ApplicationController
   def index
-    recipes = Recipe.order("created_at DESC")
-    render json: recipes
+    @recipes = Recipe.order("created_at DESC")
+    render json: @recipes
   end
 
   def create
-    recipe = Recipe.create(recipe_param)
-    render json: recipe
+    @recipe = Recipe.create(recipe_param)
+    render json: @recipe
   end
 
   def update
@@ -16,13 +16,13 @@ class RecipesController < ApplicationController
   end
 
   def show
-    recipe = Recipe.find(params[:id])
-    render json: recipe 
+    @recipe = Recipe.find(params[:id])
+    render json: @recipe 
   end
 
   def destroy
-    recipe = Recipe.find(params[:id])
-    recipe.destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
     head :no_content, status: :ok
   end
 

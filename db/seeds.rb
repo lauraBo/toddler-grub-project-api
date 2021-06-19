@@ -12,8 +12,8 @@
 9.times do |i|
     Recipe.create(
     title: "Recipe #{i + 1}",
-    ingredients: '227g tub clotted cream, 25g butter, 1 tsp cornflour,100g parmesan, grated nutmeg, 250g fresh fettuccine or tagliatelle, snipped chives or chopped parsley to serve (optional)',
-    method: 'In a medium saucepan, stir the clotted cream, butter, and cornflour over a low-ish heat.',
+    ingredients: '227g tub clotted cream, 25g butter, 25ml milk',
+    method: 'In a medium saucepan, stir the clotted cream',
     time: '30',
     freezable: 'no'
 )
