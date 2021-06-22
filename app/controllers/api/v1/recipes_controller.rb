@@ -6,9 +6,13 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.create(recipe_param)
-    render json: @recipe
-  end
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.after_save
+      render json: @recipe
+    else 
+      render json: {error: 'Could not create new recipe'}
+    end
+end 
 
   def update
     recipe = Recipe.find(params[:id])
@@ -28,8 +32,8 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   private
-    def recipe_param
-      params.require(:recipe).permit(:title, :ingredients, :method)
+    def recipe_params
+      params.require(:recipe).permit(:title, :ingredients, :method, :time, :freezable)
     end
 
 end
