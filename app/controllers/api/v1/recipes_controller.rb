@@ -1,5 +1,6 @@
 class Api::V1::RecipesController < ApplicationController
   
+
   def index
     @recipes = Recipe.all
     render json: @recipes
@@ -33,7 +34,7 @@ end
 
   private
     def recipe_params
-      params.require(:recipe).permit(:title, :ingredients, :method, :time, :freezable)
+      params.require(:recipe).permit(:title, :ingredients, :instructions, :time, :freezable)
     end
 
 end

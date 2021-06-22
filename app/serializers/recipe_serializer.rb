@@ -1,3 +1,3 @@
 class RecipeSerializer < ActiveModel::Serializer
-  attributes :title, :ingredients , :method, :time, :freezable
+  attributes :title, :ingredients , :instructions, :time, :freezable
 end
